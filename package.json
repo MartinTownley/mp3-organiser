@@ -1,0 +1,26 @@
+{
+  "name": "mp3-organiser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartinTownley/mp3-organiser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MartinTownley/mp3-organiser/issues"
+  },
+  "homepage": "https://github.com/MartinTownley/mp3-organiser#readme",
+  "dependencies": {
+    "music-metadata": "^7.14.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
