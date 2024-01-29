@@ -1,16 +1,30 @@
+const { extractMetadata, organiseFiles } = require("./app");
+const fs = require("fs/promises");
 const path = require("path");
-const { extractMetadata } = require("./app.js");
 
-describe("Organise MP3s Tests", () => {
-  describe("Extract Metadata", () => {
-    test("should return artist and album information", () => {
-      const filePath = path.resolve(__dirname, "test-data", "sample01.mp3");
-      const metadata = extractMetadata(filePath);
+describe("organiseFiles()", () => {
+  const testRootFolder = path.join(__dirname, "test-organise");
+  const artist = "Madonna";
+  const mp3FileName = "sample01.mp3";
+  const mp3FilePath = path.join(__dirname, "test-data", mp3FileName);
 
-      expect(metadata).toEqual({
-        artist: "Test Artist",
-        album: "Test Album",
+  beforeAll(async () => {
+    try {
+      fs.mkdir(testRootFolder, { recursive: true }).then(() => {
+        console.log("Test root folder Created");
       });
+    } catch (err) {
+      console.log(err);
+    }
+  });
+
+  afterAll(async () => {
+    // clean up:
+    await fs.rmdir(testRootFolder, { recursive: true }).then(() => {
+      console.log("Test root folder removed");
     });
+  });
+  test("should create a folder based on the artist", () => {
+    expect(true).toBe(false);
   });
 });

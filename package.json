@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/MartinTownley/mp3-organiser#readme",
   "dependencies": {
+    "fs-extra": "^11.2.0",
     "music-metadata": "^7.14.0"
   },
   "devDependencies": {
