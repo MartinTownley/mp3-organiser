@@ -18,12 +18,15 @@ async function extractMetadata(filePath) {
   }
 }
 
-async function organiseFiles(rootFolder) {
-  // Get a list of all MP3 files in the root folder
+async function organiseFiles(rootFolder, mp3File) {
+  // need to call extractMetadata on the filepath given
+  console.log("ROOT:", rootFolder);
+  console.log("MP3File:", mp3File);
+  // create filePath:
+  const filePath = path.join(rootFolder, mp3File);
+  console.log("filePath:", filePath);
 }
 
-const myFilePath = "./test-data/sample01.mp3";
-const extracted = extractMetadata(myFilePath);
 module.exports = {
   extractMetadata,
   organiseFiles,
